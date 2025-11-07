@@ -11,16 +11,19 @@
  * Requires Plugins: woocommerce
  **/
 
-defined('ABSPATH') || exit;
-
-include __DIR__. '/vendor/autoload.php';
-
 use App\DemPlugin;
 use App\Controller\DemMenuController;
 
+// if the absolute path is not used, exit:
+defined('ABSPATH') || exit;
+
+define('PLUG_DIR', plugin_dir_path(__FILE__));
+
+require PLUG_DIR . '/vendor/autoload.php';
 
 $dem_plugin = new DemPlugin(__FILE__);
 $dem_menu = new DemMenuController();
+
 
  /** 
  * This file is for handling : activation, execution, deactivation of the plugin

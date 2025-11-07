@@ -32,12 +32,12 @@ class DemPlugin {
     // fonction de redirection
         public static function render(string $name) {
 
-        $file = __DIR__ . "App/View/$name.php";
+            $file = PLUG_DIR . "View/$name.php";
 
-        ob_start();
+            ob_start();
 
-        include_once($file);
+            include_once($file);
 
-        echo ob_get_clean();
+            echo ob_get_clean();
     }
 }

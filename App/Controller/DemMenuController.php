@@ -16,7 +16,7 @@ class DemMenuController {
 
 // Création de l'onglet Set Paiements
     public function dem_create_menu() {
-        add_menu_page('Set Payments', 'Set Payments', 'edit_posts', 'set_payments', '', '',30);
+        add_menu_page('Set Payments', 'Set Payments', 'manage_options', 'set_payments', [$this, 'toSetPayments'], 'dashicons-bank',40);
     }
 
 
