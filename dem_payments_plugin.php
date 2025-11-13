@@ -23,19 +23,3 @@ require PLUG_DIR . '/vendor/autoload.php';
 
 $dem_plugin = new DemPlugin(__FILE__);
 $dem_menu = new DemMenuController();
-
-
- /** 
- * This file is for handling : activation, execution, deactivation of the plugin
- * Its features will be developped in other files (MVC architecture)
- * */
-
- 
-
-// Exécution de l'extension
-// Création de l'onglet Set Paiements
-
-
-// add_action('admin_menu','dem_create_menu');
-
-// Création de la page
